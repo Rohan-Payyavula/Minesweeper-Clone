@@ -1,6 +1,7 @@
 public class Game {
     private Map map;
     private Block[][] dashboard;
+    public int points=0;
     public GameStatus status = GameStatus.RUNNING;
     public Game(int width, int height,int bombCount){
         map = new Map(width,height,bombCount);
@@ -12,6 +13,7 @@ public class Game {
             status = GameStatus.LOSE;
         }else{
             revealBlock(x, y);
+            points++;
             checkWin();
         }
     }
