@@ -93,6 +93,7 @@ public class Game {
     }
 
     public void printGame() {
+        System.out.println("Points: " + points);
         for(Block[] i: dashboard){
             for(Block j: i){
                 if(j.getStatus() != CurrentStatus.NOT_CLICKED && j.getClass() ==Bomb.class) {
